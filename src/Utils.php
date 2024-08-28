@@ -23,7 +23,14 @@ class Utils
       $JoinSeparetor,
       $JoinArr
     );
-  } 
+  }
+  
+  public static function IsValidArray(
+    array $IsValidArr
+  ): bool {
+    return is_array($IsValidArr) 
+        && sizeof($IsValidArr);
+  }
 
   public static function Mapper(
     array $MapperArr,
