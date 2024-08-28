@@ -7,7 +7,7 @@ use ReflectionFunction;
 
 class Utils
 {
-  public static function ObterNumberOfParameters(
+  public static function ObterNumberOfArgs(
     callable $callable
   ): int {
     return (
@@ -29,7 +29,7 @@ class Utils
     array $MapperArr,
     callable $MapperCallable
   ): array {
-    if (static::ObterNumberOfParameters(
+    if (static::ObterNumberOfArgs(
       $MapperCallable
     ) === 2 ) {
       return array_map(
@@ -50,7 +50,7 @@ class Utils
     array $MapperArr,
     callable $MapperCallable    
   ): array {
-    if (static::ObterNumberOfParameters(
+    if (static::ObterNumberOfArgs(
       $MapperCallable
     ) === 2 ) {
       return array_filter(
