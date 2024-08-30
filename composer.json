@@ -1,10 +1,10 @@
 {
-    "name": "websyspro/common-api",
+    "name": "websyspro/common",
     "description": "Feature Set",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Websyspro\\CommonApi\\": "src/"
+            "Websyspro\\Common\\": "src/"
         }
     },
     "authors": [
