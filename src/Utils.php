@@ -6,6 +6,12 @@ namespace Websyspro\Common
 
   class Utils
   {
+    public static function FirstElementInArray(
+      array $arr = []
+    ): mixed {
+      return array_shift($arr);
+    }
+
     public static function ObterNumberOfArgs(
       callable $callable
     ): int {
