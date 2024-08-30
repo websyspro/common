@@ -6,7 +6,7 @@ namespace Websyspro\Common
 
   class Utils
   {
-    public static function FirstElementInArray(
+    public static function ShitArray(
       array $arr = []
     ): mixed {
       return array_shift($arr);
