@@ -31,10 +31,17 @@ namespace Websyspro\Common
     }
     
     public static function IsValidArray(
-      array $IsValidArr
+      array $IsValidArr = []
     ): bool {
       return is_array($IsValidArr) 
           && sizeof($IsValidArr);
+    }
+
+    public static function IsEmptyArray(
+      array $IsEmptyArray = []
+    ): bool {
+      return sizeof($IsEmptyArray) 
+         === 0;
     }
 
     public static function Mapper(
