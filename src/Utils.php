@@ -12,6 +12,21 @@ namespace Websyspro\Common
       return array_shift($arr);
     }
 
+    public static function DestructArrayKeys(
+      array $columnArr = []
+    ): array {
+      return [
+        static::ShitArray(
+          array_keys( $columnArr )
+        ),
+        $columnArr[
+          static::ShitArray(
+            array_keys( $columnArr )
+          )
+        ]
+      ];
+    }
+    
     public static function ObterNumberOfArgs(
       callable $callable
     ): int {
