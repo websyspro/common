@@ -1,6 +1,6 @@
 {
-  "name": "websyspro/sqlfromclass",
-  "description": "Set of PHP features for use in Libraries",
+  "name": "websyspro/commons",
+  "description": "Common utilities library for PHP applications",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "license": "MIT",
