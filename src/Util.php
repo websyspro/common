@@ -573,10 +573,27 @@ class Util
    */  
   public static function guidV4(
   ): string {
+    /**
+     *  Generate 16 random bytes (128 bits) 
+     **/
     $data = random_bytes(16);
+
+    /**
+     * Set the UUID version to 4 (0100)
+     * Clear the high nibble and set it to 0x4
+     **/
     $data[6] = \chr(\ord($data[6]) & 0x0f | 0x40);
+
+    /**
+     * Set the UUID variant to RFC 4122 (10xxxxxx) 
+     * Clear the two most significant bits and set them to 10
+     **/
     $data[8] = \chr(\ord($data[8]) & 0x3f | 0x80);
 
+    /**
+     * Convert the binary data to hexadecimal
+     * Split it into groups and format it as a UUID string
+     **/    
     return vsprintf(
       '%s%s-%s-%s-%s-%s%s%s',
       str_split(
